@@ -1,0 +1,13 @@
+.people{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.people_item{
+    height: 100px;
+}
+
+

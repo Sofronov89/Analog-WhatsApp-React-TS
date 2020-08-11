@@ -1,0 +1,25 @@
+.left_text{
+    float: left;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.right_text{
+    float: right;
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.div_chat{
+    display: flex;
+    flex-direction: column;
+    background-color: #D7D9DC;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.chat_item{
+    margin-bottom: 20px;
+}

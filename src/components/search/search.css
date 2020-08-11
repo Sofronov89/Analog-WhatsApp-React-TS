@@ -1,0 +1,24 @@
+.div_search_chat, .div_search_text{
+    background-color: #F2F2F2;
+    height: 60px;
+    border-bottom: 2px solid #D7D9DC;
+    display: table;
+}
+
+input{
+    width: 90%;
+    height: 70%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 7px;
+    outline: none;
+}
+
+left_text{
+    float: left;
+    background-color: aquamarine;
+}
+
+right_text{
+    float: right;
+}
