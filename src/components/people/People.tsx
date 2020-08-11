@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./people.css";
-import {Button} from "../button/Button";
-import {Person} from "../person/Person";
+import {Button} from "../button";
+import {Person} from "../person";
 import ComponentService from '../../component-service';
 
 
@@ -35,7 +35,7 @@ export class People extends React.Component {
             peopleAll.push(man);
             this.setState({people: peopleAll});
             ComponentService.saveMan(peopleAll);
-        };
+        }
 
         let people = this.state.people.reverse();
         if(this.props.findPeople.length >= 1){
@@ -52,7 +52,7 @@ export class People extends React.Component {
                                 valueSpan = {man.name}
                             />
                         }
-                    />
+                     href = {'#'}/>
                 ))}
             </div>
         );

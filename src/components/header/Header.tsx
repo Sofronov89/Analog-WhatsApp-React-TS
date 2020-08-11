@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./header.css";
-import {Person} from "../person/Person";
+import {Person} from "../person";
 
 
 export class Header extends React.Component {

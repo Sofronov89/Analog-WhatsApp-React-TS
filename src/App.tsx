@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./components/header/Header";
-import {Search} from "./components/search/Search";
-import {People} from "./components/people/People";
-import {Chat} from "./components/chat/Chat";
+import {Header} from "./components/header";
+import {Search} from "./components/search";
+import {People} from "./components/people";
+import {Chat} from "./components/chat";
 import ComponentService from './component-service';
 
 export class App extends React.Component {
@@ -24,15 +24,17 @@ export class App extends React.Component {
     };
 
     inputText(text){
-        let UserItemThis = this.state.UserItem;
-        let item = {
-            text: text,
-            id: this.state.activeMan.id,
-            time: new Date()
-        };
-        UserItemThis.push(item);
-        this.setState({UserItem: UserItemThis});
-        ComponentService.saveUser(UserItemThis);
+        if(!!text){
+            let UserItemThis = this.state.UserItem;
+            let item = {
+                text: text,
+                id: this.state.activeMan.id,
+                time: new Date()
+            };
+            UserItemThis.push(item);
+            this.setState({UserItem: UserItemThis});
+            ComponentService.saveUser(UserItemThis);
+        }
     };
 
     inputSearch(text){
@@ -43,7 +45,7 @@ export class App extends React.Component {
             if (man.name.includes(text)){
                 findPeople.push(man)
             }
-        })
+        });
         this.setState({findPeople: findPeople});
     };
 
@@ -60,7 +62,7 @@ export class App extends React.Component {
             UserItemThis.push(user);
             this.setState({UserItem: UserItemThis});
             ComponentService.saveUser(UserItemThis);
-        };
+        }
 
         let activeMan = this.state.activeMan;
         return (
@@ -80,7 +82,7 @@ export class App extends React.Component {
                     <People activeManState = {this.activeManState.bind(this)} findPeople = {this.state.findPeople}/>
                 </div>
                 <div className = 'right_block'>
-                    {!this.state.activeMan && <div className = 'right_block_image'></div>}
+                    {!this.state.activeMan && <div className = 'right_block_image'/>}
                     {!!this.state.activeMan && <Header srcImg = {activeMan.image} valueSpan = {activeMan.name}/>}
                     {!!this.state.activeMan && <Chat activeMan = {activeMan} UserItemThis = {UserItemThis}/>}
                     {!!this.state.activeMan && <Search

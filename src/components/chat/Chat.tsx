@@ -15,7 +15,7 @@ export class Chat extends React.Component {
                 time: new Date()
             };
             activeManMass.push(item2);
-        };
+        }
         let arrChat = [];
         if(!!activeMan && !!UserItemThis) {
             activeManMass.map(item => {
@@ -30,14 +30,14 @@ export class Chat extends React.Component {
             });
             arrChat.sort(function (a, b) {
                 if (a.time > b.time) {
-                    return -1;
-                };
-                if (a.time < b.time) {
                     return 1;
-                };
+                }
+                if (a.time < b.time) {
+                    return -1;
+                }
                 return 0;
             })
-        };
+        }
 
         return (
             <div className = 'div_chat'>
