@@ -3,21 +3,19 @@ import "./people.css";
 import {Button} from "../button";
 import {Person} from "../person";
 import ComponentService from '../../component-service';
+import {IPeopleProps, MyState} from "./IPeopleProps";
 
 
-export class People extends React.Component {
-    constructor(props) {
+export class People extends React.Component<IPeopleProps, MyState> {
+    constructor(props: any) {
         super(props);
         this.state = {
             activeMan: '',
             people: ComponentService.getMan(),
         };
-        if(!this.state.people){
-            this.state.people = []
-        }
     };
 
-    activePeopleItem(man){
+    activePeopleItem(man: any){
         this.setState({activeMan: man});
         this.props.activeManState(man);
     };
@@ -30,7 +28,7 @@ export class People extends React.Component {
             let man = {
                 name: faker.name.findName(),
                 image: faker.image.avatar(),
-                id: peopleAll.length
+                id: 'man_'+peopleAll.length
             };
             peopleAll.push(man);
             this.setState({people: peopleAll});
@@ -43,8 +41,8 @@ export class People extends React.Component {
         }
         return (
             <div className = 'people'>
-                {people.map(man => (
-                    <Button
+                {people.map((man: { image: any; name: any; }, index: string | number | undefined) => (
+                    <Button key={index}
                         className = {'people_item'}
                         onClick = {this.activePeopleItem.bind(this, man)}
                         value = {!!man && <Person

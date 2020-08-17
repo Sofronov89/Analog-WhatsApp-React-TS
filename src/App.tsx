@@ -5,44 +5,46 @@ import {Search} from "./components/search";
 import {People} from "./components/people";
 import {Chat} from "./components/chat";
 import ComponentService from './component-service';
+import {IAppProps, MyState} from "./IAppProps";
 
-export class App extends React.Component {
-    constructor(props) {
+
+// type MyState = { userItem: any, activeMan: any, findPeople: any, peopleRes: any};
+export class App extends React.Component<IAppProps, MyState> {
+    constructor(props: any) {
         super(props);
+        // @ts-ignore
         this.state = {
             activeMan: '',
-            UserItem: ComponentService.getUser(),
+            userItem: ComponentService.getUser(),
             findPeople: []
         };
-        if(!this.state.UserItem){
-            this.state.UserItem = []
-        }
     };
 
-    activeManState(man){
+    activeManState(man: any){
         this.setState({activeMan: man});
     };
 
-    inputText(text){
+    inputText(text: any){
         if(!!text){
-            let UserItemThis = this.state.UserItem;
+            let userItemThis = this.state.userItem;
             let item = {
                 text: text,
                 id: this.state.activeMan.id,
                 time: new Date()
             };
-            UserItemThis.push(item);
-            this.setState({UserItem: UserItemThis});
-            ComponentService.saveUser(UserItemThis);
+            userItemThis.push(item);
+            this.setState({userItem: userItemThis});
+            ComponentService.saveUser(userItemThis);
         }
     };
 
-    inputSearch(text){
+    inputSearch(text: string){
         let peopleRes = ComponentService.getMan();
         this.setState({peopleRes: peopleRes});
-        let findPeople = [];
-        peopleRes.map(man => {
+        let findPeople: any[] | never[] = [];
+        peopleRes.map((man: { name: string | any[]; }) => {
             if (man.name.includes(text)){
+                // @ts-ignore
                 findPeople.push(man)
             }
         });
@@ -51,17 +53,17 @@ export class App extends React.Component {
 
     public render() {
         // localStorage.clear();
-        let UserItemThis = this.state.UserItem;
-        if (UserItemThis.length == 0) {
+        let userItemThis = this.state.userItem;
+        if (userItemThis.length == 0) {
             let faker = require('faker');
             let user = {
                 name: faker.name.findName(),
                 image: faker.image.avatar(),
                 id: 100
             };
-            UserItemThis.push(user);
-            this.setState({UserItem: UserItemThis});
-            ComponentService.saveUser(UserItemThis);
+            userItemThis.push(user);
+            this.setState({userItem: userItemThis});
+            ComponentService.saveUser(userItemThis);
         }
 
         let activeMan = this.state.activeMan;
@@ -69,8 +71,8 @@ export class App extends React.Component {
             <div className='App'>
                 <div className='left_block'>
                     <Header
-                        srcImg={UserItemThis[0].image}
-                        valueSpan={UserItemThis[0].name}
+                        srcImg={userItemThis[0].image}
+                        valueSpan={userItemThis[0].name}
                     />
                     <Search
                         className = {'div_search_chat'}
@@ -84,7 +86,7 @@ export class App extends React.Component {
                 <div className = 'right_block'>
                     {!this.state.activeMan && <div className = 'right_block_image'/>}
                     {!!this.state.activeMan && <Header srcImg = {activeMan.image} valueSpan = {activeMan.name}/>}
-                    {!!this.state.activeMan && <Chat activeMan = {activeMan} UserItemThis = {UserItemThis}/>}
+                    {!!this.state.activeMan && <Chat activeMan = {activeMan} userItemThis = {userItemThis}/>}
                     {!!this.state.activeMan && <Search
                         className = {'div_search_text'}
                         type = {"text"}

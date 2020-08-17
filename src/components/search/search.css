@@ -14,11 +14,11 @@ input{
     outline: none;
 }
 
-left_text{
+.left_text{
     float: left;
     background-color: aquamarine;
 }
 
-right_text{
+.right_text{
     float: right;
 }
