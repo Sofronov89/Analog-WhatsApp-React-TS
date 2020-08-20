@@ -4,8 +4,6 @@
     <list default="true" id="6641330c-28f6-4e8f-991e-e5b0545d7276" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IAppProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/IAppProps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/people/People.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/people/People.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="782">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -43,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/people/People.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="-119">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -120,13 +118,13 @@
         <option value="$PROJECT_DIR$/src/components/chat/IChatProps.ts" />
         <option value="$PROJECT_DIR$/src/components/people/IPeopleProps.ts" />
         <option value="$PROJECT_DIR$/src/components/search/search.css" />
-        <option value="$PROJECT_DIR$/src/components/people/People.tsx" />
         <option value="$PROJECT_DIR$/src/IAppProps.ts" />
+        <option value="$PROJECT_DIR$/src/components/people/People.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-25" />
     <option name="y" value="100" />
     <option name="width" value="1750" />
@@ -234,7 +232,7 @@
       <workItem from="1597654087190" duration="3015000" />
       <workItem from="1597666461655" duration="10063000" />
       <workItem from="1597738415822" duration="591000" />
-      <workItem from="1597917441441" duration="2434000" />
+      <workItem from="1597917441441" duration="3978000" />
     </task>
     <task id="LOCAL-00001" summary="debug №1">
       <created>1597145008293</created>
@@ -257,14 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597676582204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="debug №2">
+      <created>1597922915686</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597922915766</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152605000" />
+    <option name="totallyTimeSpent" value="154149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22405817" />
@@ -281,8 +286,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033045" side_tool="true" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49966952" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5009914" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4990086" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -532,8 +537,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/people/People.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="-119">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -542,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="782">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

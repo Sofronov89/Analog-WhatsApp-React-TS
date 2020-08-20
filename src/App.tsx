@@ -54,7 +54,7 @@ export class App extends React.Component<IAppProps, MyState> {
     };
 
     public render() {
-        localStorage.clear();
+        // localStorage.clear();
         let userItemThis = this.state.userItem;
         if (userItemThis.length == 0) {
             let faker = require('faker');
