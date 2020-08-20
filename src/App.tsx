@@ -8,7 +8,6 @@ import ComponentService from './component-service';
 import {IAppProps, MyState} from "./IAppProps";
 
 
-// type MyState = { userItem: any, activeMan: any, findPeople: any, peopleRes: any};
 export class App extends React.Component<IAppProps, MyState> {
     constructor(props: any) {
         super(props);
@@ -18,6 +17,9 @@ export class App extends React.Component<IAppProps, MyState> {
             userItem: ComponentService.getUser(),
             findPeople: []
         };
+        if(!this.state.userItem){
+            this.state.userItem = []
+        }
     };
 
     activeManState(man: any){
@@ -52,7 +54,7 @@ export class App extends React.Component<IAppProps, MyState> {
     };
 
     public render() {
-        // localStorage.clear();
+        localStorage.clear();
         let userItemThis = this.state.userItem;
         if (userItemThis.length == 0) {
             let faker = require('faker');

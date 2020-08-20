@@ -13,6 +13,9 @@ export class People extends React.Component<IPeopleProps, MyState> {
             activeMan: '',
             people: ComponentService.getMan(),
         };
+        if(!this.state.people){
+            this.state.people = []
+        }
     };
 
     activePeopleItem(man: any){

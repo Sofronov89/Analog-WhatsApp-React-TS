@@ -1,4 +1,5 @@
 export interface IAppProps {
+    userItem: any;
 }
 
 export interface MyState {
