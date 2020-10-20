@@ -21,22 +21,13 @@ export class Chat extends React.Component<IChatProps> {
         if(!!activeMan && !!userItemThis) {
             activeManMass.map(item => {
                 if (userItemThis[0].id == item.id) {
-                    arrChat.push(item)
+                    arrChat.push(item);
                 }
             });
             userItemThis.map((item: { id: any; }) => {
                 if (activeMan.id == item.id) {
-                    arrChat.push(item)
+                    arrChat.push(item);
                 }
-            });
-            arrChat.sort(function (a, b) {
-                if (a.time > b.time) {
-                    return 1;
-                }
-                if (a.time < b.time) {
-                    return -1;
-                }
-                return 0;
             });
             while(arrChat.length > 20){
                 arrChat.shift()

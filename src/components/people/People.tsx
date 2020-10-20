@@ -31,7 +31,7 @@ export class People extends React.Component<IPeopleProps, MyState> {
             let man = {
                 name: faker.name.findName(),
                 image: faker.image.avatar(),
-                id: 'man_'+peopleAll.length
+                id: peopleAll.length
             };
             peopleAll.push(man);
             this.setState({people: peopleAll});
